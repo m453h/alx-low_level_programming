@@ -5,7 +5,8 @@
 * main - prints a message to standard error
 *
 * Description: the main function
-* this function prints exactly and that piece of art is useful" - Dora Korpar, 2015-10-19 to the standard error
+* this function prints exactly and that piece of art is useful" -
+* Dora Korpar, 2015-10-19 to the standard error
 * Return: 1
 */
 int main(void)
