@@ -14,9 +14,9 @@ int main(void)
 
 	alphabet = 'a';
 
-	while (alphabet < 123)
+	while (alphabet <= 'z')
 	{
-		if (alphabet != 101 && alphabet != 113)
+		if (alphabet != 'e' && alphabet != 'q')
 			putchar(alphabet);
 
 		alphabet++;
