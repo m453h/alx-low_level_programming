@@ -33,9 +33,9 @@ int main(void)
 			{
 				if (i < j && j < k)
 				{
-					putchar(i % 10 + '0');
-					putchar(j % 10 + '0');
-					putchar(k % 10 + '0');
+					putchar('0' + i);
+					putchar('0' + j);
+					putchar('0' + k);
 
 					if (i != 7 || j != 8 || k != 9)
 					{
