@@ -21,7 +21,7 @@ int main(void)
 
 		if (number < 10)
 		{
-			putchar(44);
+			putchar(',');
 			putchar(' ');
 		}
 	}
