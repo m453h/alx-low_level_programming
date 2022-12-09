@@ -10,22 +10,22 @@
 */
 int main(void)
 {
-	char lowercase_alphabet;
-	char uppercase_alphabet;
+	char lowercase_letter;
+	char uppercase_letter;
 
-	lowercase_alphabet = 'a';
-	uppercase_alphabet = 'A';
+	lowercase_letter = 'a';
+	uppercase_letter = 'A';
 
-	while (lowercase_alphabet < 123)
+	while (lowercase_letter < 'z')
 	{
-		putchar(lowercase_alphabet);
-		lowercase_alphabet++;
+		putchar(lowercase_letter);
+		lowercase_letter++;
 	}
 
-	while (uppercase_alphabet < 91)
+	while (uppercase_letter <= 'Z')
 	{
-		putchar(uppercase_alphabet);
-		uppercase_alphabet++;
+		putchar(uppercase_letter);
+		uppercase_letter++;
 	}
 
 	putchar('\n');
