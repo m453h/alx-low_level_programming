@@ -30,15 +30,19 @@ int main(void)
 		{
 			if (i < j)
 			{
-				if (i == 0 && j == 1)
-					printf("%d%d", i, j);
-				else
-					printf(", %d%d", i, j);
+				putchar(i % 10 + '0');
+				putchar(j % 10 + '0');
+
+				if (i != 0 && j != 0)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+
 			}
 		}
 	}
 
-	printf("\n");
 
 	return (0);
 }
