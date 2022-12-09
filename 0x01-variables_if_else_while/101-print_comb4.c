@@ -33,17 +33,22 @@ int main(void)
 			{
 				if (i < j && j < k)
 				{
-					if (i == 0 && j == 1 && k == 2)
-						printf("%d%d%d", i, j, k);
-					else
-						printf(", %d%d%d", i, j, k);
+					putchar(i % 10 + '0');
+					putchar(j % 10 + '0');
+					putchar(k % 10 + '0');
+
+					if (i != 7 || j != 8 || k != 9)
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 
 			}
 		}
 	}
 
-	printf("\n");
+	putchar('\n');
 
 	return (0);
 }
