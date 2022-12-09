@@ -30,8 +30,8 @@ int main(void)
 		{
 			if (i < j)
 			{
-				putchar(i % 10 + '0');
-				putchar(j % 10 + '0');
+				putchar('0' + i);
+				putchar('0' + j);
 
 				if (i != 8 || j != 9)
 				{
