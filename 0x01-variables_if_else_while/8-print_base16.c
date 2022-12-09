@@ -11,21 +11,21 @@
 int main(void)
 {
 	char numeric_base_16;
-	char alphabet_base_16;
+	char letter_base_16;
 
 	numeric_base_16 = '0';
-	alphabet_base_16 = 'a';
+	letter_base_16 = 'a';
 
-	while (numeric_base_16 < 58)
+	while (numeric_base_16 <= '9')
 	{
 		putchar(numeric_base_16);
 		numeric_base_16++;
 	}
 
-	while (alphabet_base_16 < 103)
+	while (letter_base_16 < 'g')
 	{
-		putchar(alphabet_base_16);
-		alphabet_base_16++;
+		putchar(letter_base_16);
+		letter_base_16++;
 	}
 
 	putchar('\n');
