@@ -18,8 +18,9 @@ int main(void)
 
 	while (alphabet < 123)
 	{
-		if(alphabet != 101 && alphabet != 113)
-		putchar(alphabet);
+		if (alphabet != 101 && alphabet != 113)
+			putchar(alphabet);
+
 		alphabet++;
 	}
 
