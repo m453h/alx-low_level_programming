@@ -22,7 +22,8 @@ void display_multiplication_result(int i, int j)
 		_putchar(first_digit + '0');
 	}
 	else
-	{	if (j !=0)
+	{
+		if (j != 0)
 		{
 			_putchar(' ');
 		}
