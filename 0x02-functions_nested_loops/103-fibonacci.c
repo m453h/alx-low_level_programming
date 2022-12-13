@@ -12,7 +12,6 @@
 int main(void)
 {
 	long first_term = 0, second_term = 1, next_term = 0, sum = 0;
-	int i;
 
 	while (next_term <= 4000000)
 	{
