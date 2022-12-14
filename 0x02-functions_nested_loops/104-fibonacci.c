@@ -45,12 +45,9 @@ int main(void)
 		if (i < 98)
 			printf(", ");
 
-		term_1_half_1 = term_2_half_1;
-		term_1_half_2 = term_2_half_2;
-		term_2_half_1 = half_1_term_sum;
-		term_2_half_2 = half_2_term_sum;
+		term_1_half_1 = term_2_half_1, term_1_half_2 = term_2_half_2;
+		term_2_half_1 = half_1_term_sum, term_2_half_2 = half_2_term_sum;
 	}
-
 	printf("\n");
 
 	return (0);
