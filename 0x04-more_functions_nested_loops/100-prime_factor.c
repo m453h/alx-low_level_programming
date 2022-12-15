@@ -37,7 +37,7 @@ int main(void)
 	long int number, i;
 
 	number = 612852475143;
-	i = sqrt(number);
+	i = 782848;
 
 	while (i > 1)
 	{
