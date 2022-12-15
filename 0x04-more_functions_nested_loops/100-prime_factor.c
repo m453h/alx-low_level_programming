@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - prints largest prime factor of a number
@@ -10,33 +11,32 @@
  */
 int main(void)
 {
-	long int number, i, j, is_prime;
+	long int number, i, max_prime_factor;
 
 	number = 612852475143;
-	i = 782848;
 
-	while (i > 1)
+	while (number % 2 == 0)
 	{
-		if (number % i == 0)
-		{
-			is_prime = 1;
-
-			for (j = i - 1; j > 1; j--)
-			{
-				if (i % j == 0)
-					is_prime = 0;
-			}
-
-			if (is_prime == 1)
-			{
-				printf("%ld", i);
-				break;
-			}
-		}
-
-		i--;
+		max_prime_factor = 2;
+		number = number / 2;
 	}
 
+	for (i = 3; i <= sqrt(number); i = i + 2)
+	{
+		while (number % i == 0)
+		{
+			max_prime_factor = i;
+			number = number / i;
+		}
+
+	}
+
+	if (number > 2)
+	{
+		max_prime_factor = number;
+	}
+
+	printf("%ld", max_prime_factor);
 	printf("\n");
 
 	return (0);
