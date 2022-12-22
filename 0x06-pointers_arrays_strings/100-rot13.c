@@ -4,7 +4,7 @@
  * rot13 - enocdes a string using rot13
  * @s: the input string
  *
- * Return: (char) the string encoded to 1337
+ * Return: (char) the string encoded by rot13
  */
 char *rot13(char *s)
 {
