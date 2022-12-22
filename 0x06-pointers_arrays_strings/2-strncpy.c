@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strncpy - copies a string
+ * _strncpy - copies first n characters from src to dest
  * @dest: the first string to be copied
- * @src: the second string to be appen
+ * @src: the second string to be appended
+ * @n: the number of characters to be extracted and copied
  *
  *  Return: (char *) - concatenated string
  */
@@ -22,7 +23,11 @@ char *_strncpy(char *dest, char *src, int n)
 		j++;
 	}
 
-	dest[j] = '\0';
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
 
 	return (dest);
 }
