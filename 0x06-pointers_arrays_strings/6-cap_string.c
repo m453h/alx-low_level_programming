@@ -23,16 +23,13 @@ char *cap_string(char *s)
 				s[i] = s[i] - 32;
 			}
 		}
-		else
-		{
-			is_capitalize_next = 0;
-		}
 
 		if (s[i] == '\n' || s[i] == ',' ||
 			s[i] == ',' || s[i] == ';' ||
 			s[i] == '.' || s[i] == '!' ||
 			s[i] == '?' || s[i] == '"' ||
 			s[i] == '(' || s[i] == ')' ||
+			s[i] == ' ' || s[i] == '\t' ||
 			s[i] == '{' || s[i] == '}')
 		{
 			is_capitalize_next = 1;
