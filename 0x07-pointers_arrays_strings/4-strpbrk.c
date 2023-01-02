@@ -8,7 +8,8 @@
  *  Return: (char *) - pointer to the byte in @s that matches
  *  bytes in @accept
  */
-char *_strpbrk(char *s, char *accept){
+char *_strpbrk(char *s, char *accept)
+{
 	unsigned int i = 0, j = 0;
 
 	while (s[i] != '\0')
@@ -24,5 +25,5 @@ char *_strpbrk(char *s, char *accept){
 		i++;
 	}
 
-	return '\0';
+	return ('\0');
 }
