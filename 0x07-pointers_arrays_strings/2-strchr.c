@@ -5,7 +5,9 @@
  * @s: the string to check for occurence of character
  * @c: the character to look for in @s
  *
- *  Return: (char *) - pointer to the first occurence of @c
+ *  Return:
+ *	If c is found - pointer to the first occurence of @c
+ *	If c is not found null byte
  */
 char *_strchr(char *s, char c)
 {
@@ -18,5 +20,5 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
-	return (NULL);
+	return ('\0');
 }
