@@ -6,7 +6,7 @@
  * @b: the byte to fill in our array
  * @n: the length of the array to be filled
  *
- *  Return: (char *) - filled string
+ *  Return: (char *) - filled array
  */
 char *_memset(char *s, char b, unsigned int n)
 {
