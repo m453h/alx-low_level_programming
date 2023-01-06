@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; i < 5; i++)
 		{
-			if (amount % coins[i] == 0)
+			if (amount - coins[i] >= 0)
 			{
 				amount = amount - coins[i];
 				counter++;
