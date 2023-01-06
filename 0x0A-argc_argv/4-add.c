@@ -64,7 +64,7 @@ int is_proper_int(int n, char *number)
  *  Return: (0) if summation was done succesfully or (1) if summation
  *  was not done due to user supplying non integer arguments
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int sum = 0, i, number;
 
