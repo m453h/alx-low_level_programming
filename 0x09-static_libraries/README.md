@@ -1,1 +1,1 @@
-A repository that contains source code for the C low level programming project
+A repository that contains source code for the 0x09. C - Static libraries
