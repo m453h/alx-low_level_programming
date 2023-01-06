@@ -16,7 +16,7 @@ int _strlen(char *str)
 		counter++;
 	}
 
-	return counter;
+	return (counter);
 }
 
 /**
@@ -34,7 +34,7 @@ int is_proper_int(int n, char *number)
 	int i;
 	char str[10];
 
-	sprintf(str,"%d",n);
+	sprintf(str, "%d", n);
 
 	if (_strlen(str) == _strlen(number))
 	{
