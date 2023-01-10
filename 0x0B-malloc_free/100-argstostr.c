@@ -5,8 +5,8 @@
  * argstostr - concatenates all the arguments of program
  * @ac: number of arguments
  * @av: pointer to array of arguments
- * 
- * Return: pointer to a string containing all agruments else 
+ *
+ * Return: pointer to a string containing all agruments else
  * NULL if fails to concatenate the agruments
  */
 char *argstostr(int ac, char **av)
@@ -23,6 +23,8 @@ char *argstostr(int ac, char **av)
 		{
 			length++;
 		}
+
+		length++;
 	}
 
 	args_str = malloc(sizeof(char) * length + 1);
