@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory, 
+ * _strdup - returns a pointer to a newly allocated space in memory,
  * which contains a copy of the string given as a parameter.
  *
  * @str: the original array to copy from
@@ -34,6 +34,8 @@ char *_strdup(char *str)
 	{
 		str_copy[i] = str[i];
 	}
+
+	str_copy[i] = '\0';
 
 	return (str_copy);
 }
