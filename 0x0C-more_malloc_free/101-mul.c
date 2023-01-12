@@ -105,6 +105,29 @@ char *multiply(char *s1, char *s2)
 }
 
 /**
+ * is_zero - checks if a string is only made up of zero
+ *@s: The input string to check
+ *
+ *  Return: 1 if string is made up of only zero, 0 if not
+ */
+int is_zero(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		if (s[i] != '0')
+		{
+			return (0);
+		}
+
+		i++;
+	}
+
+	return (1);
+}
+
+/**
  * main - multiplies two arguments passed by the user
  *
  * @argc: the number of arguments passed to the program
@@ -121,10 +144,17 @@ int main(int argc, char *argv[])
 		s1 = argv[1];
 		s2 = argv[2];
 
-		result = multiply(s1, s2);
+		if (is_zero(s1) || is_zero(s2))
+		{
+			printf("%s\n", "0");
+		}
+		else
+		{
+			result = multiply(s1, s2);
+			printf("%s\n", result);
+			free(result);
+		}
 
-		printf("%s\n", result);
-		free(result);
 		return (0);
 
 	}
