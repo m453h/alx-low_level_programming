@@ -11,8 +11,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *memb_array;
-	char *memb_array_cpy;
+	char *memb_array;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
@@ -23,11 +22,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (memb_array == NULL)
 		return (NULL);
 
-	memb_array_cpy = memb_array;
-
 	for (i = 0; i < nmemb; i++)
 	{
-		memb_array_cpy[i] = '0';
+		memb_array[i] = '\0';
 	}
 
 	return (memb_array);
