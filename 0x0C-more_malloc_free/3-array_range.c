@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates memory for an array
- * @nmemb: The number of array elements
- * @size: The number of bytes for each element
+ * array_range - creates an array of integers within a range
+ * @min: The first element of the array
+ * @max: The last element of the array
  *
  *  Return: (NULL) if @min > @max,
  *  pointer to created array
