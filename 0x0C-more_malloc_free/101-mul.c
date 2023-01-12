@@ -29,35 +29,6 @@ int _strlen(char *s)
 }
 
 /**
- * _calloc - allocates memory for an array
- * @nmemb: The number of array elements
- * @size: The number of bytes for each element
- *
- *  Return: (NULL) if @nmemb = 0 or @size = 0,
- *  pointer to created array
- */
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	char *memb_array;
-	unsigned int i;
-
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-
-	memb_array = malloc(size * nmemb);
-
-	if (memb_array == NULL)
-		return (NULL);
-
-	for (i = 0; i < (nmemb * size); i++)
-	{
-		memb_array[i] = '0';
-	}
-
-	return (memb_array);
-}
-
-/**
  * multiply - multiplies two numbers stored as strings
  *
  * @s1: first number to be multiplied
@@ -65,7 +36,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  *
  * Return: pointer to the array containing the result
  */
-char *multiply(char *s1, char *s2)
+void multiply(char *s1, char *s2)
 {
 	int i, j, tmp, *a, *b, *ans;
 	char *result;
@@ -76,8 +47,10 @@ char *multiply(char *s1, char *s2)
 	a = malloc(sizeof(int) * l1 + 1);
 	b = malloc(sizeof(int) * l2 + 1);
 	ans = malloc(sizeof(int) * (l1 + l2) + 1);
-	result = _calloc((l1 + l2 + 1), 1);
+	result = malloc(sizeof(char) * (l1 + l2 + 1));
 
+	if (a == NULL || b == NULL || ans == NULL || result == NULL)
+		return (0);
 	for (i = l1 - 1, j = 0; i >= 0; i--, j++)
 	{
 		a[j] = s1[i] - '0';
@@ -93,7 +66,6 @@ char *multiply(char *s1, char *s2)
 	}
 	for (i = 0; i < l1 + l2; i++)
 		tmp = ans[i] / 10, ans[i] = ans[i] % 10, ans[i + 1] = ans[i + 1] + tmp;
-
 	for (i = l1 + l2; i >= 0; i--)
 	{
 		if (ans[i] > 0)
@@ -101,10 +73,11 @@ char *multiply(char *s1, char *s2)
 	}
 	for (j = i; j >= 0; j--)
 		result[i - j] = ans[j] + '0';
-	free(a);
-	free(b);
-	free(ans);
-	return (result);
+
+	printf("%s\n", result);
+
+	free(a), free(b), free(ans), free(result);
+	return (1);
 }
 
 /**
@@ -140,7 +113,7 @@ int is_zero(char *s)
  */
 int main(int argc, char *argv[])
 {
-	char *s1, *s2, *result;
+	char *s1, *s2;
 
 	if (argc == 3)
 	{
@@ -153,9 +126,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			result = multiply(s1, s2);
-			printf("%s\n", result);
-			free(result);
+			multiply(s1, s2);
 		}
 
 		return (0);
