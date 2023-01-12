@@ -34,9 +34,9 @@ int _strlen(char *s)
  * @s1: first number to be multiplied
  * @s2: second number to be multiplied
  *
- * Return: pointer to the array containing the result
+ * Return: 0 if success, 1 if fail
  */
-void multiply(char *s1, char *s2)
+int multiply(char *s1, char *s2)
 {
 	int i, j, tmp, *a, *b, *ans;
 	char *result;
