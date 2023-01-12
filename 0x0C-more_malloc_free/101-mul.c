@@ -76,7 +76,7 @@ char *multiply(char *s1, char *s2)
 	a = malloc(sizeof(int) * l1 + 1);
 	b = malloc(sizeof(int) * l2 + 1);
 	ans = malloc(sizeof(int) * (l1 + l2) + 1);
-	result = calloc((l1 + l2 + 1), 1);
+	result = _calloc((l1 + l2 + 1), 1);
 
 	for (i = l1 - 1, j = 0; i >= 0; i--, j++)
 	{
@@ -101,6 +101,9 @@ char *multiply(char *s1, char *s2)
 	}
 	for (j = i; j >= 0; j--)
 		result[i - j] = ans[j] + '0';
+	free(a);
+	free(b);
+	free(ans);
 	return (result);
 }
 
