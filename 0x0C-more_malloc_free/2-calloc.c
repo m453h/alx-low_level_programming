@@ -24,7 +24,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	for (i = 0; i < nmemb; i++)
 	{
-		memb_array[i] = '\0';
+		memb_array[i] = 0;
 	}
 
 	return (memb_array);
