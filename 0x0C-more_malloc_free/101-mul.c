@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 void *_calloc(unsigned int nmemb, unsigned int size);
-int is_digit(char *s);
 void rev_number_string(int length, char *str);
 int _strlen(char *s);
 char *multiply(char *s1, char *s2);
@@ -34,27 +33,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	return (memb_array);
-}
-
-/**
- * is_digit - check if string is digit
- * @s: string to check
- *
- * Return: (1) If string is digit, Else return (0)
- */
-int is_digit(char *s)
-{
-	while (*s)
-	{
-		if (*s < '0' || *s > '9')
-		{
-			return (0);
-		}
-
-		s++;
-	}
-
-	return (1);
 }
 
 /**
@@ -96,6 +74,7 @@ int _strlen(char *s)
 		}
 		else
 		{
+			printf("Error\n");
 			exit(98);
 		}
 	}
@@ -157,11 +136,6 @@ int main(int argc, char *argv[])
 	char *result;
 
 	if (argc != 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	if (!is_digit(argv[1]) || !is_digit(argv[2]))
 	{
 		printf("Error\n");
 		exit(98);
