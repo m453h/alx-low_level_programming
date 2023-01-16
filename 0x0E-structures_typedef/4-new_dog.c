@@ -20,25 +20,6 @@ int _strlen(char *s)
 }
 
 /**
- * allocate_str - dynamically allocates space for a string
- * @str: The string to dynamically allocate space for
- *
- * Return: (char*) - pointer to the first char of a string
- */
-char *allocate_str(char *str)
-{
-	char *s = malloc(sizeof(char) * (_strlen(str) + 1));
-
-	if (s == NULL)
-		return (NULL);
-
-	s = str;
-
-	return (s);
-}
-
-
-/**
  * new_dog - creates new dog struct
  *
  * @name: the name of the dog
@@ -59,7 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	d->name = allocate_str(name);
+	d->name = malloc(sizeof(char) * (_strlen(name) + 1));
 
 	if (d->name == NULL)
 	{
@@ -67,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	d->owner = allocate_str(owner);
+	d->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 
 	if (d->owner == NULL)
 	{
@@ -76,6 +57,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
+	d->name = name;
+	d->owner = owner;
 	d->age = age;
 
 	return (d);
