@@ -2,6 +2,33 @@
 #include <stdlib.h>
 
 /**
+ * _strcpy - copies the string pointed to another buffer
+ *
+ * @src: The origin buffer to be copied
+ * @dest: The destination buffer
+ *
+ * Description: this function copies the string pointed
+ * by src, including the termination null byte \0, to
+ * the buffer pointed to by dest
+ *
+ * Return: (char *dest) pointer to copy destination
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int length = 0;
+
+	while (src[length] != '\0')
+	{
+		dest[length] = src[length];
+		length++;
+	}
+
+	dest[length] = '\0';
+
+	return (dest);
+}
+
+/**
  * _strlen - calculates the length of a string
  *@s: The input string used to determine length
  *
@@ -57,8 +84,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	d->name = name;
-	d->owner = owner;
+	d->name = _strcpy(d->name, name);
+	d->owner = _strcpy(d->owner, owner);
 	d->age = age;
 
 	return (d);
