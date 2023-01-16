@@ -2,6 +2,41 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - calculates the length of a string
+ *@s: The input string used to determine length
+ *
+ *  Return: (int) length of string
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (s[length] != '\0')
+	{
+		length++;
+	}
+
+	return (length);
+}
+
+/**
+ * allocate_str - dynamically allocates space for a string
+ * @str: The string to dynamically allocate space for
+ *
+ * Return: (char*) - pointer to the first char of a string
+ */
+char *allocate_str(char *str)
+{
+	char *s = malloc(sizeof(char) * (_strlen(str) + 1));
+
+	if (s == NULL)
+		return (NULL);
+
+	return (s);
+}
+
+
+/**
  * new_dog - creates new dog struct
  *
  * @name: the name of the dog
@@ -22,9 +57,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	d->name = name;
+	d->name = allocate_str(name);
 	d->age = age;
-	d->owner = owner;
+	d->owner = allocate_str(owner);
+
+	if (d->name == NULL || d->owner == NULL)
+	{
+		free(d);
+	}
+
 
 	return (d);
 }
