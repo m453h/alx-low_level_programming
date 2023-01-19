@@ -59,6 +59,7 @@ void print_all(const char * const format, ...)
 {
 	int i = 0, j;
 	va_list list;
+	char *separator = "";
 
 	p_t pts[] = {
 		{print_char, 'c'},
@@ -80,9 +81,9 @@ void print_all(const char * const format, ...)
 
 		if (j < 4)
 		{
-			if (i != 0)
-				printf(", ");
+			printf("%s", separator);
 			pts[j].f(list);
+			separator = ", ";
 		}
 
 		i++;
