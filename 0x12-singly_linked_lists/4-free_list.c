@@ -3,7 +3,7 @@
 
 /**
  * free_list - frees a list_t list from memory.
- * @h: the list_t list to free.
+ * @head: the list_t list to free.
  *
  * Return: (void)
  */
