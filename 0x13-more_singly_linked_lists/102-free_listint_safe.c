@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * looped_listint_len - counts the number of unique counter
+ * _looped_listint_len - counts the number of unique counter
  * in listint_t linked list.
  * @head: the listint_t head.
  *
