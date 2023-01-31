@@ -7,12 +7,13 @@
  * Return: the address of the node where the loop starts else,
  * (NULL) if loop not found
  */
-listint_t *find_listint_loop(listint_t *head)
+size_t looped_listint_len(const listint_t *head)
 {
-	listint_t *t_node, *h_node;
+	const listint_t *t_node, *h_node;
+	size_t counter = 1;
 
 	if (head == NULL || head->next == NULL)
-		return (NULL);
+		return (0);
 
 	t_node = head->next;
 	h_node = (head->next)->next;
@@ -27,16 +28,25 @@ listint_t *find_listint_loop(listint_t *head)
 			{
 				t_node = t_node->next;
 				h_node = h_node->next;
+				counter++;
 			}
 
-			return (t_node);
+			t_node = t_node->next;
+
+			while (t_node != h_node)
+			{
+				counter++;
+				t_node = t_node->next;
+			}
+
+			return (counter);
 		}
 
 		t_node = t_node->next;
 		h_node = (h_node->next)->next;
 	}
 
-	return (NULL);
+	return (0);
 }
 
 /**
