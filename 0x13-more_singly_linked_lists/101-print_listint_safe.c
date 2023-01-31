@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * find_listint_loop -  finds the loop in a linked list.
+ * looped_listint_len - counts the number of unique nodes
+ * in listint_t linked list.
  * @head: the listint_t head.
  *
  * Return: the address of the node where the loop starts else,
