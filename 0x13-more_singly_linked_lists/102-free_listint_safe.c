@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * looped_listint_len - counts the number of unique counter
@@ -8,7 +9,7 @@
  * Return: the address of the node where the loop starts else,
  * (NULL) if loop not found
  */
-size_t looped_listint_len(const listint_t *head)
+size_t _looped_listint_len(const listint_t *head)
 {
 	const listint_t *t_node, *h_node;
 	size_t counter = 1;
@@ -61,7 +62,7 @@ size_t free_listint_safe(listint_t **h)
 	listint_t *tmp;
 	size_t counter, index;
 
-	counter = looped_listint_count(*h);
+	counter = _looped_listint_len(*h);
 
 	if (counter == 0)
 	{
