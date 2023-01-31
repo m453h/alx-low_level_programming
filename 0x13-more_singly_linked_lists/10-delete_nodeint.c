@@ -43,9 +43,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 		iterator = iterator->next;
 		temp_node = iterator->next;
-		counter++;	
+		counter++;
 	}
-	
+
 	iterator->next = temp_node->next;
 	free(temp_node);
 	return (1);
