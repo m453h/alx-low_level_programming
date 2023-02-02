@@ -59,7 +59,12 @@ unsigned int binary_to_uint(const char *b)
 {
 
 	unsigned int uint = 0;
-	int length = _binary_strlen(b);
+	int length;
+
+	if (b == NULL)
+		return (0);
+
+	length = _binary_strlen(b);
 
 	if (length == -1)
 		return (0);
