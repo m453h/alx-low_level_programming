@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * _binary_strlen - calculates the length of a string
  * containing binary number characters 1,0
