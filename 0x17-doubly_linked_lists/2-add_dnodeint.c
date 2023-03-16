@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - adds a new node at the beginning of a list_t list.
  * @head: a pointer to the head of the list_t list
- * @str: the string to be added to the list_t list
+ * @n: the integer data of the node
  *
  * Return: address of the new element, or NULL if fails
  */
