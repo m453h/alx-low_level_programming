@@ -22,14 +22,13 @@ size_t dlistint_len(const dlistint_t *h)
 }
 
 /**
- * insert_dnodeint_at_index - Inserts a new node in a dlistint_t
- *                            list at a given position.
- * @h: A pointer to the head of the dlistint_t list.
- * @idx: The position to insert the new node.
- * @n: The integer for the new node to contain.
+ * insert_dnodeint_at_index - inserts a new node to dlistint_t list
+ *                            in a given position
+ * @h: pointer to the head of the dlistint_t list
+ * @idx: the position to insert the new node
+ * @n: the data(n) of the new node
  *
- * Return: If the function fails - NULL.
- *         Otherwise - the address of the new node.
+ * Return: address of the new node on success, ELSE (NULL)
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -39,8 +38,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (h == NULL)
 		return (NULL);
-
-
 
 	if (idx > len)
 		return (NULL);
