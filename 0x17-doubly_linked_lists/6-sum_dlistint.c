@@ -7,7 +7,6 @@
  *
  * Return: (int) sum of all data(n) of a dlistint_t linked list
  */
-
 int sum_dlistint(dlistint_t *head)
 {
 	int sum = 0;
