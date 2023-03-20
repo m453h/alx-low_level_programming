@@ -1,0 +1,1 @@
+A repository that contains source code for the 0x18. C - Dynamic libraries project
