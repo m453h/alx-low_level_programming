@@ -4,7 +4,7 @@
  * hash_table_create - creates a hash table.
  * @size: size of the array
  *
- * Return: Pointter to new hash_table_t on success,
+ * Return: Pointer to new hash_table_t on success,
  * ELSE return NULL
  *
  */
