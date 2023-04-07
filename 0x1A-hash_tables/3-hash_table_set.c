@@ -12,7 +12,6 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *new_node, *current_node;
-
 	char *value_dup, *key_dup;
 	unsigned long int index;
 
@@ -34,6 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			free(current_node->value);
 			current_node->value = value_dup;
+			free(key_dup);
 			return (1);
 		}
 		current_node = current_node->next;
