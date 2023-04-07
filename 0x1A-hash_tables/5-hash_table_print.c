@@ -22,7 +22,7 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < size; i++)
 	{
 		node_iterator = ht->array[i];
-		
+
 		while (node_iterator != NULL)
 		{
 			if (displayed_pairs > 0)
