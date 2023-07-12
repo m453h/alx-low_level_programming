@@ -12,8 +12,7 @@
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t step = 0;
-	size_t step_size = sqrt(size);
+	size_t step = 0, step_size = sqrt(size);
 	listint_t *node = list;
 	listint_t *jump = list;
 
