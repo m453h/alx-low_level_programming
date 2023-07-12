@@ -12,11 +12,11 @@
  */
 int mod_binary_search(int *array, size_t left, size_t right, int value)
 {
-	size_t i, middle;
+	size_t i;
 
 	while (left <= right)
 	{
-		middle = left + (right - left) / 2;
+		int middle = left + (right - left) / 2;
 
 		printf("Searching in array: ");
 
