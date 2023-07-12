@@ -14,6 +14,9 @@ int mod_binary_search(int *array, size_t left, size_t right, int value)
 {
 	size_t i;
 
+	if (array == NULL)
+		return (-1);
+
 	while (left <= right)
 	{
 		int middle = left + (right - left) / 2;
